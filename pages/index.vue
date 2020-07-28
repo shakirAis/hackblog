@@ -14,11 +14,6 @@ import Banner from "~/components/Banner.vue";
 import Posts from "~/components/Posts.vue";
 
 export default {
-  head() {
-    return {
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
-    };
-  },
   components: {
     Header,
     Footer,
