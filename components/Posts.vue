@@ -72,9 +72,6 @@ export default {
       buttonMessage: 'Читать подробнее...',
     }
   },
-  head: {
-    title: 'Main page'
-  },
   methods: {
     showMore() {
       this.isClicked = !this.isClicked;
