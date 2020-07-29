@@ -17,14 +17,14 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date", format: "Do MMM YYYY"}
       - {label: "Author", name: "author", widget: "string"}
-      - {label: "Featured Image1", name: "thumbnail", widget: "image", required: false}
-      - {label: "Featured Image2", name: "thumbnail", widget: "image", required: false}
-      - {label: "Featured Image3", name: "thumbnail", widget: "image", required: false}
-      - {label: "Featured Image4", name: "thumbnail", widget: "image", required: false}
-      - {label: "Featured Image5", name: "thumbnail", widget: "image", required: false}
-      - {label: "Featured Image6", name: "thumbnail", widget: "image", required: false}
-      - {label: "Featured Image7", name: "thumbnail", widget: "image", required: false}
-      - {label: "Featured Image8", name: "thumbnail", widget: "image", required: false}
+      - {label: "Featured Image1", name: "thumbnail1", widget: "image", required: false}
+      - {label: "Featured Image2", name: "thumbnail2", widget: "image", required: false}
+      - {label: "Featured Image3", name: "thumbnail3", widget: "image", required: false}
+      - {label: "Featured Image4", name: "thumbnail4", widget: "image", required: false}
+      - {label: "Featured Image5", name: "thumbnail5", widget: "image", required: false}
+      - {label: "Featured Image6", name: "thumbnail6", widget: "image", required: false}
+      - {label: "Featured Image7", name: "thumbnail7", widget: "image", required: false}
+      - {label: "Featured Image8", name: "thumbnail8", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
