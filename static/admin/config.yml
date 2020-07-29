@@ -17,7 +17,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date", format: "Do MMM YYYY"}
       - {label: "Author", name: "author", widget: "string"}
-      - {label: "Featured Images", name: "slider", widget: "slider", required: false,
+      - {label: "Featured Images", name: "thumbnail", widget: "image", required: false,
       fields:
         - {label: Featured Image, name: thumbnail, widget: image}
         - {label: Featured Image, name: thumbnail, widget: image}
@@ -39,7 +39,7 @@ collections:
     format: 'json'
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Featured Images", name: "slider", widget: "slider", required: false,
+      - {label: "Featured Images", name: "thumbnail", widget: "image", required: false,
       fields:
         - {label: Featured Image, name: thumbnail, widget: image}
         - {label: Featured Image, name: thumbnail, widget: image}
