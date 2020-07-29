@@ -11,7 +11,7 @@
 import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
 import Banner from "~/components/Banner.vue";
-import Posts from "~/components/Posts.vue";
+import Posts from "./posts/Posts.vue";
 
 export default {
   head() {

@@ -1,23 +1,4 @@
 <template>
-  <div>
-    <ul v-for="(blogPost, index) in blogPosts" :key="index">
-      <nuxt-link :to="`~/content/blog/${blogPost.slug}`">{{blogPost.title}}</nuxt-link>
-      <p>{{blogPost.description}}</p>
-    </ul>
-  </div>
-</template>
-
-<script>
-export default {
-  computed: {
-    blogPosts() {
-      return this.$store.state.blogPosts
-    },
-  },
-}
-</script>
-
-<template>
   <b-container>
     <b-row>
       <b-col md="12">
@@ -36,13 +17,13 @@ export default {
                     controls
                   >
                     <b-carousel-slide
-                      img-src="~/assets/slide1.png"
+                      :img-src="blogPost.thumbnail"
                     ></b-carousel-slide>
                     <b-carousel-slide
-                      img-src="~/assets/slide1.png"
+                      :img-src="blogPost.thumbnail"
                     ></b-carousel-slide>
                     <b-carousel-slide
-                      img-src="~/assets/slide1.png"
+                      :img-src="blogPost.thumbnail"
                     ></b-carousel-slide>
                   </b-carousel>
                 </div>
@@ -54,7 +35,7 @@ export default {
 
                   Чтобы приобрести сим карту, обязательно нужно иметь при себе паспорт, иной раз спрашивают ещё и немецкую прописку. Сим карта стоит денег, около 10 евро, а чтобы её "заправить" нужно платить отдельно. Вообще сим карту можно купить в любом супермаркете без предоставления документов, но чтобы её активировать нужно пройти онлайн подтверждение личности по видеосвязи.</p>
 
-                  <p class="full_version">{{blogPost.description}}</p>
+                  <p class="full_version">{{blogPost.body}}</p>
                   <a class="more" v-on:click="showMore">{{ buttonMessage }}</a>
                 </div>
                 <div class="tags">
@@ -70,6 +51,9 @@ export default {
   </b-container>
 </template>
 <script>
+import { mapActions } from 'vuex'
+import Store from '../../store/index'
+
 export default {
   asyncData () {
     return {
@@ -96,6 +80,11 @@ export default {
         shortBlock.style.display = "block";
         this.buttonMessage = 'Читать подробнее...';
       }
+    },
+  },
+  computed: {
+    blogPosts() {
+      return this.$store.state.blogPosts
     },
   },
 }
@@ -126,11 +115,11 @@ export default {
 }
 .carousel-control-prev-icon {
   left: 0;
-  background-image: url(../assets/prev.png);
+  background-image: url(../../assets/prev.png);
 }
 .carousel-control-next-icon {
   right: 0;
-  background-image: url(../assets/next.png);
+  background-image: url(../../assets/next.png);
 }
 .carousel-inner {
   width: 250px;
@@ -224,7 +213,7 @@ span a {
   line-height: 20px;
   height: 20px;
   width: 200px;
-  background-image: url(../assets/hashtag.svg);
+  background-image: url(../../assets/hashtag.svg);
   background-repeat: no-repeat;
   background-position: 0 50%;
   background-size: 11px;
