@@ -17,18 +17,16 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date", format: "Do MMM YYYY"}
       - {label: "Author", name: "author", widget: "string"}
-      - {label: "Featured Images", required: false, fields:
-        - {label: "Featured Image", name: "thumbnail", widget: "image"}
-        - {label: "Featured Image", name: "thumbnail", widget: "image"}
-        - {label: "Featured Image", name: "thumbnail", widget: "image"}
-        - {label: "Featured Image", name: "thumbnail", widget: "image"}
-        - {label: "Featured Image", name: "thumbnail", widget: "image"}
-        - {label: "Featured Image", name: "thumbnail", widget: "image"}
-        - {label: "Featured Image", name: "thumbnail", widget: "image"}
-        - {label: "Featured Image", name: "thumbnail", widget: "image"}
-        - {label: "Featured Image", name: "thumbnail", widget: "image"}
-        - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      }
+      - {label: "Featured Image1", name: "thumbnail", widget: "image", required: false}
+      - {label: "Featured Image2", name: "thumbnail", widget: "image", required: false}
+      - {label: "Featured Image3", name: "thumbnail", widget: "image", required: false}
+      - {label: "Featured Image4", name: "thumbnail", widget: "image", required: false}
+      - {label: "Featured Image5", name: "thumbnail", widget: "image", required: false}
+      - {label: "Featured Image6", name: "thumbnail", widget: "image", required: false}
+      - {label: "Featured Image7", name: "thumbnail", widget: "image", required: false}
+      - {label: "Featured Image8", name: "thumbnail", widget: "image", required: false}
+      - {label: "Featured Image9", name: "thumbnail", widget: "image", required: false}
+      - {label: "Featured Image10", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
@@ -38,10 +36,7 @@ collections:
     format: 'json'
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Featured Images", required: false, fields:
-        - {label: "Featured Image", name: "thumbnail", widget: "image"}
-        - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      }
+      - {label: "Featured Images", required: false, name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Setup"
     name: "setup"
